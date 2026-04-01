@@ -1,0 +1,43 @@
+name: todo_app
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  easy_pie_chart: ^1.0.2
+  sidebarx: ^0.17.2
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+     - assets/images/app_logo.png
+     - assets/images/login_v2.png
+     - assets/images/background.png
+     - assets/images/logo_x.png
+     - assets/images/logo_google.png
+     - assets/images/logo_facebook.png
+     - assets/images/register.png
+     - assets/images/car.png
+     - assets/images/dashboard_logo.png
+     - assets/images/waving_hand_icon.png
+     - assets/images/task_image.png
+     - assets/images/task_stats_icon.png
+     - assets/images/task_completed_icon.png
+     - assets/images/task_icon.png
+     - assets/images/profile_picture.png
+
+  fonts:
+    - family: Montserrat
+      fonts:
+       - asset: assets/fonts/Montserrat-VariableFont_wght.ttf
