@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/Pages/loading_page.dart';
+import 'package:todo_app/pages/dashboard_page.dart';
+import 'package:todo_app/pages/todo_page.dart';
 
 class NavigatorWidget extends StatelessWidget {
   final String currentPage;
@@ -8,7 +11,7 @@ class NavigatorWidget extends StatelessWidget {
     required this.currentPage,
   }) : super(key:key);
 
-  Widget _buildNavButton({required IconData icon, required String label, bool isSelected = false}) {
+  Widget _buildNavButton({required IconData icon, required String label, bool isSelected = false, required BuildContext context, required Widget targetPage}) {
     Color backgroundClr = isSelected ? Colors.white : Color(0xFFFF6767);
     Color textClr = !isSelected ? Colors.white : Color(0xFFFF6767);
 
@@ -16,7 +19,14 @@ class NavigatorWidget extends StatelessWidget {
       width: double.infinity,
       height: 60,
       child: ElevatedButton.icon(
-        onPressed: () {},
+        onPressed: () {
+                      Navigator.pushAndRemoveUntil(
+                        context, 
+                        MaterialPageRoute(
+                          builder: (context) => targetPage), 
+                        (Route<dynamic> route) => false
+                      );
+                    },
         style: ElevatedButton.styleFrom(
           elevation: 0,
           backgroundColor: backgroundClr,
@@ -79,19 +89,19 @@ class NavigatorWidget extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 14),
-                      _buildNavButton(icon: Icons.dashboard, label: "Dashboard", isSelected: currentPage == "Dashboard"),
+                      _buildNavButton(icon: Icons.dashboard, label: "Dashboard", isSelected: currentPage == "Dashboard", context:context, targetPage: DashboardPage()),
                       const SizedBox(height: 8),
-                      _buildNavButton(icon: Icons.priority_high, label: "Vital Tasks", isSelected: currentPage == "Vital Tasks"),
+                      _buildNavButton(icon: Icons.priority_high, label: "Vital Tasks", isSelected: currentPage == "Vital Tasks", context:context, targetPage: DashboardPage()),
                       const SizedBox(height: 8),
-                      _buildNavButton(icon: Icons.task, label: "My Task", isSelected: currentPage == "My Task"),
+                      _buildNavButton(icon: Icons.task, label: "My Task", isSelected: currentPage == "My Task", context:context, targetPage: TodoPage()),
                       const SizedBox(height: 8),
-                      _buildNavButton(icon: Icons.list, label: "Task Categories", isSelected: currentPage == "Task Categories"),
+                      _buildNavButton(icon: Icons.list, label: "Task Categories", isSelected: currentPage == "Task Categories", context:context, targetPage: DashboardPage()),
                       const SizedBox(height: 8),
-                      _buildNavButton(icon: Icons.settings, label: "Settings", isSelected: currentPage == "Settings"),
+                      _buildNavButton(icon: Icons.settings, label: "Settings", isSelected: currentPage == "Settings", context:context, targetPage: DashboardPage()),
                       const SizedBox(height: 8),
-                      _buildNavButton(icon: Icons.help, label: "Help", isSelected: currentPage == "Help"),
+                      _buildNavButton(icon: Icons.help, label: "Help", isSelected: currentPage == "Help", context:context, targetPage: DashboardPage()),
                       Spacer(),
-                      _buildNavButton(icon: Icons.logout, label: "Logout"),
+                      _buildNavButton(icon: Icons.logout, label: "Logout", context:context, targetPage: LoadingScreen()),
                     ],
                   ),
                 ),

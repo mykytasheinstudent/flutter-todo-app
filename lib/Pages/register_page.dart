@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/Pages/login_page.dart';
+import 'package:todo_app/pages/dashboard_page.dart';
 import '../Components/text_field.dart';
 import 'package:flutter/foundation.dart';
 import 'dart:io';
@@ -102,7 +104,14 @@ class _RegisterPageState extends State<RegisterPage> {
               ),
               const SizedBox(height: 25,),
               ElevatedButton(
-                onPressed: () {}, 
+                onPressed: () {
+                  Navigator.pushAndRemoveUntil(
+                    context, 
+                    MaterialPageRoute(
+                      builder: (context) => const DashboardPage()), 
+                    (Route<dynamic> route) => false
+                  );
+                }, 
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFFFF9090),
                   shape: RoundedRectangleBorder(
@@ -134,7 +143,14 @@ class _RegisterPageState extends State<RegisterPage> {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushAndRemoveUntil(
+                        context, 
+                        MaterialPageRoute(
+                          builder: (context) => const LoginPage()), 
+                        (Route<dynamic> route) => false
+                      );
+                    },
                     child: Text(
                       "Sign In",
                       style: TextStyle(

@@ -24,6 +24,20 @@ class MainApp extends StatelessWidget {
       // home: const TodoPage()               //4
       // home: const UserDetailsPage()        //5
       // home: const ViewTaskPage()           //6 
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
+        useMaterial3: true,
+      ),
+      initialRoute: '/',
+      routes: {
+        '/':(context) => const LoadingScreen(),
+        '/login':(context) => const LoginPage(),
+        '/register':(context) => const RegisterPage(),
+        '/dashboard':(context) => const DashboardPage(),
+        '/mytasks':(context) => const TodoPage(),
+        '/viewtask':(context) => const ViewTaskPage(),
+      },
     );
   }
 }
