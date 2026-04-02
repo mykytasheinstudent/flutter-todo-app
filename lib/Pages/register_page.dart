@@ -25,7 +25,6 @@ class _RegisterPageState extends State<RegisterPage> {
 
     Widget content = Row(
       children: [
-        //picture Expanded
         Expanded(
           child: Padding(
             padding: const EdgeInsets.all(25.0),
@@ -37,7 +36,6 @@ class _RegisterPageState extends State<RegisterPage> {
             ),
           ),
         ),
-        //inputs comlumn
         Expanded(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -46,7 +44,6 @@ class _RegisterPageState extends State<RegisterPage> {
               Padding(
                 padding: EdgeInsets.fromLTRB(0, 0, 0, 25),
                 child: Text(
-                  //S.of(context).welcomeLogin,
                   "Sign Up",
                   style: TextStyle(
                     fontFamily: "Montserrat",
@@ -182,7 +179,6 @@ class _RegisterPageState extends State<RegisterPage> {
         child: Center(
           child: Container(
             constraints: BoxConstraints(maxWidth: 1236),
-            // padding: const EdgeInsets.all(50.0),
             padding: EdgeInsets.fromLTRB(50, 100, 50, 100),
             decoration: BoxDecoration(
               color: Colors.white,

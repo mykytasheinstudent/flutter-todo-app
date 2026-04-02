@@ -17,13 +17,6 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // home: const LoadingScreen()          //0
-      // home: const LoginPage()              //1
-      // home: const RegisterPage()           //2
-      // home: const DashboardPage()          //3
-      // home: const TodoPage()               //4
-      // home: const UserDetailsPage()        //5
-      // home: const ViewTaskPage()           //6 
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),

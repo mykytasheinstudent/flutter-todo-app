@@ -191,9 +191,7 @@ class _DashboardPageState extends State<DashboardPage> {
         SizedBox(height: 36,),
         Center(
           child: Container(
-            // constraints: BoxConstraints(maxWidth: 1024),
             padding: const EdgeInsets.all(26.0),
-            // padding: EdgeInsets.fromLTRB(24, 24, 24, 24),
             decoration: BoxDecoration(
               border: BoxBorder.all(color: const Color(0xFFA1A3AB).withAlpha(63))
             ),
@@ -242,7 +240,6 @@ class _DashboardPageState extends State<DashboardPage> {
                                 onPressed: () {},
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: backgroundClr,
-                                  // foregroundColor: Colors.white,
                                   elevation: 0,
                                   padding: const EdgeInsets.symmetric(
                                     horizontal: 14,
@@ -509,7 +506,6 @@ class _DashboardPageState extends State<DashboardPage> {
                         ),
                       ),
                     ),
-                    // const SizedBox(width: 12),
                     SizedBox(
                       height: 52,
                       child: ElevatedButton(
@@ -529,7 +525,6 @@ class _DashboardPageState extends State<DashboardPage> {
                   ],
                 ),
               ),
-              // Spacer(),
               const SizedBox(width: 120),
               SizedBox(
                 height: 52,

@@ -38,11 +38,6 @@ class _TodoPageState extends State<TodoPage> {
           alignment: Alignment.topCenter,
           child: Container(
             constraints: const BoxConstraints(maxWidth: 1400),
-            // padding: const EdgeInsets.all(26.0),
-            // padding: EdgeInsets.fromLTRB(24, 24, 24, 24),
-            // decoration: BoxDecoration(
-              // border: BoxBorder.all(color: const Color(0xFFA1A3AB).withAlpha(63))
-            // ),
             child: SizedBox(
               height: MediaQuery.of(context).size.height - 96 - 54 - 80,
               child: Row(
@@ -67,23 +62,6 @@ class _TodoPageState extends State<TodoPage> {
                       child: Column(
 
                         children: [
-                          // Row(
-                          //   crossAxisAlignment: CrossAxisAlignment.start,
-                          //   children: [
-                              
-                          //   ],
-                          // ),
-                          
-                          // Row(
-                          //   children: [
-                          //     Text("20 June", style: TextStyle(color: const Color(0xFF000000),fontFamily: "Inter", fontSize: 12)),
-                          //     SizedBox(width: 8,),
-                          //     Icon(Icons.circle, size: 7, color: const Color(0xFFA1A3AB)),
-                          //     SizedBox(width: 4,),
-                          //     Text("Today", style: TextStyle(color: const Color(0xFFA1A3AB),fontFamily: "Inter", fontSize: 12)),
-                          //   ],
-                          // ),
-                          // const SizedBox(height: 16),
                           Expanded(
                             
                             child: Column(
@@ -155,7 +133,6 @@ class _TodoPageState extends State<TodoPage> {
                               ]
                             ),
                             child: Column(
-                              // crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Row(
                                   children: [
@@ -288,7 +265,6 @@ class _TodoPageState extends State<TodoPage> {
               Image.asset(
                 'assets/images/dashboard_logo.png',
                 width: 169,
-                // height: 44,
                 fit: BoxFit.contain,
               ),
               const SizedBox(width: 120),
@@ -337,7 +313,6 @@ class _TodoPageState extends State<TodoPage> {
                         ),
                       ),
                     ),
-                    // const SizedBox(width: 12),
                     SizedBox(
                       height: 52,
                       child: ElevatedButton(
@@ -357,7 +332,6 @@ class _TodoPageState extends State<TodoPage> {
                   ],
                 ),
               ),
-              // Spacer(),
               const SizedBox(width: 120),
               SizedBox(
                 height: 52,

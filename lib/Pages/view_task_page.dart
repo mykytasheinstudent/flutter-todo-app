@@ -37,11 +37,6 @@ class _ViewTaskPageState extends State<ViewTaskPage> {
           alignment: Alignment.topCenter,
           child: Container(
             constraints: const BoxConstraints(maxWidth: 1400),
-            // padding: const EdgeInsets.all(26.0),
-            // padding: EdgeInsets.fromLTRB(24, 24, 24, 24),
-            // decoration: BoxDecoration(
-              // border: BoxBorder.all(color: const Color(0xFFA1A3AB).withAlpha(63))
-            // ),
             child: SizedBox(
               height: MediaQuery.of(context).size.height - 96 - 54 - 80,
               child: Row(
@@ -68,7 +63,6 @@ class _ViewTaskPageState extends State<ViewTaskPage> {
                               ]
                             ),
                             child: Column(
-                              // crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -241,7 +235,6 @@ class _ViewTaskPageState extends State<ViewTaskPage> {
               Image.asset(
                 'assets/images/dashboard_logo.png',
                 width: 169,
-                // height: 44,
                 fit: BoxFit.contain,
               ),
               const SizedBox(width: 120),
@@ -290,7 +283,6 @@ class _ViewTaskPageState extends State<ViewTaskPage> {
                         ),
                       ),
                     ),
-                    // const SizedBox(width: 12),
                     SizedBox(
                       height: 52,
                       child: ElevatedButton(
@@ -310,7 +302,6 @@ class _ViewTaskPageState extends State<ViewTaskPage> {
                   ],
                 ),
               ),
-              // Spacer(),
               const SizedBox(width: 120),
               SizedBox(
                 height: 52,

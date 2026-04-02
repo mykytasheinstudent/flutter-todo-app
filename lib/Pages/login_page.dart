@@ -27,7 +27,6 @@ class _LoginPageState extends State<LoginPage> {
 
     Widget content = Row(
       children: [
-        //inputs Expanded
         Expanded(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -36,7 +35,6 @@ class _LoginPageState extends State<LoginPage> {
               Padding(
                 padding: EdgeInsets.fromLTRB(0, 0, 0, 25),
                 child: Text(
-                  //S.of(context).welcomeLogin,
                   "Sign In",
                   style: TextStyle(
                     fontFamily: "Montserrat",
@@ -179,7 +177,6 @@ class _LoginPageState extends State<LoginPage> {
             ],
           ),
         ),
-        //picture Expanded
         Expanded(
           child: Align(
             child: Image.asset(
@@ -204,7 +201,6 @@ class _LoginPageState extends State<LoginPage> {
         child: Center(
           child: Container(
             constraints: BoxConstraints(maxWidth: 1236),
-            // padding: const EdgeInsets.all(50.0),
             padding: EdgeInsets.fromLTRB(50, 100, 50, 100),
             decoration: BoxDecoration(
               color: Colors.white,
